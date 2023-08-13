@@ -22,7 +22,7 @@ function App() {
         }));
       })
       .catch(error => {
-        console.error('Error deleting hobby:', error);
+        console.log("error: App::handleDeleteHobby ", err)
       });
   };
 

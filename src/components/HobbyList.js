@@ -24,11 +24,9 @@ function HobbyList({ user, onDeleteHobby }) {
                 year: year,
                 userID: user._id
             }
-            console.log("*****************PAYLOAD*****************", payload)
             const response = await axiosInstance.post('/api/hobbies/user', payload);
-            console.log("RESPONSE  ===========> ", response)
         } catch (err) {
-            console.log("err  ===========> ", err)
+            console.log("error: HobbyList::handleSubmit ", err)
         }
     };
 
