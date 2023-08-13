@@ -10,13 +10,13 @@ import {
     IconButton,
 } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
-
+import './DataRow.css'
 
 function CustomTable({ columns, data = [], onDelete }) {
     return (
-        <TableContainer component={Paper}>
+        <TableContainer component={Paper} className="table-container">
             <Table>
-                <TableHead>
+                <TableHead >
                     <TableRow>
                         {columns.map((column, index) => (
                             <TableCell key={index}>{column.label}</TableCell>
@@ -35,15 +35,11 @@ function CustomTable({ columns, data = [], onDelete }) {
                         <TableRow key={rowIndex}>
                             {columns.map((column, columnIndex) => (
                                 column.id == 'action' ? (< TableCell >
-                                    {/* <button onClick={() => onDelete(row)}>Delete</button> */}
-                                    <IconButton  aria-label="delete" size="large">
-                                        <DeleteIcon  onClick={() => onDelete(row)}/>
+                                    <IconButton aria-label="delete" size="large">
+                                        <DeleteIcon onClick={() => onDelete(row)} />
                                     </IconButton>
                                 </TableCell>) : (< TableCell key={columnIndex} > {row[column.id]}</TableCell>)
-
                             ))}
-
-
                         </TableRow>
                     ))}
                 </TableBody>

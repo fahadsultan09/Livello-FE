@@ -4,7 +4,6 @@ import UserList from './components/UserList';
 import HobbyList from './components/HobbyList';
 import axiosInstance from './axios'; // Import the Axios instance
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Padding } from '@mui/icons-material';
 
 
 function App() {
@@ -29,16 +28,13 @@ function App() {
 
   return (
     <div className="app">
-      {/* <UserList onSelectUser={handleSelectUser} />
-      {console.log("SELECTED USER " ,selectedUser)}
-      {selectedUser && <HobbyList user={selectedUser} onDeleteHobby={handleDeleteHobby} />} */}
-      <div className="container" style={{padding:'20px'}}>
+      <div className="container" style={{ padding: '20px' }}>
         <div className="row">
           <div className="col-md-3">
             <UserList onSelectUser={handleSelectUser} />
           </div>
           <div className="col-md-9">
-            {selectedUser && <HobbyList user={selectedUser} onDeleteHobby={handleDeleteHobby} />} 
+            {selectedUser && <HobbyList user={selectedUser} onDeleteHobby={handleDeleteHobby} />}
 
           </div>
         </div>

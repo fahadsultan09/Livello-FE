@@ -31,7 +31,7 @@ function UserList({ onSelectUser }) {
 	return (
 		<div className="user-list">
 			<h2>Users</h2>
-			<FormControl size="small" sx={{ width: "50%" }}>
+			<FormControl className='col-md-12' style={{ marginTop: "20px" }}>
 				<InputLabel >Select an option</InputLabel>
 				<Select value={selectedOption} onChange={handleSelectChange}>
 					{users.map((user) => (

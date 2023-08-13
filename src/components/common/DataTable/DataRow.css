@@ -1,0 +1,18 @@
+/* styles.css */
+.table-container {
+    border: 2px solid darkgray;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table th,
+.table td {
+    border: 1px solid darkgray;
+    padding: 8px;
+    text-align: left;
+}
